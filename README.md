@@ -1,3 +1,3 @@
 # starter-rocketseat-exercicios
-![](/docs/screenshot_starter.jpg)
+<img src="/docs/screenshot_starter.jpg" />
 Resoluções dos exercícios Starter Cursos da Rocketseat
