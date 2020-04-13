@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercício 03 - Javascript</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="app">
+      <ul></ul>
+    </div>
+
+    <script>
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+      let list = document.querySelector("ul");
+
+      for (const nome of nomes) {
+        let li = document.createElement("li");
+        let textName = document.createTextNode(nome);
+
+        li.appendChild(textName);
+        list.appendChild(li);
+      }
+    </script>
+  </body>
+</html>
+
