@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercíio 04 - Javascript</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div id="app">
+      <input type="text" name="nome" />
+      <button onClick="adicionar()">Adicionar</button>
+      <ul></ul>
+    </div>
+
+    <script>
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+      let input = document.querySelector("input[name=nome");
+      let ul = document.querySelector("ul");
+
+      function adicionaItem(text) {
+        let li = document.createElement("li");
+        let textLi = document.createTextNode(text);
+
+        li.appendChild(textLi);
+        ul.appendChild(li);
+      }
+
+      function clearInput() {
+        input.value = "";
+      }
+
+      function adicionar() {
+        adicionaItem(input.value);
+        clearInput();
+      }
+
+      for (const nome of nomes) {
+        adicionaItem(nome);
+      }
+    </script>
+  </body>
+</html>
