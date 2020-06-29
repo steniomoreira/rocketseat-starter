@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">    
-    <title>Document</title>
+    <title>Exercício 02</title>
 </head>
 <body>
     <input type="text" name="user" >
@@ -16,7 +16,7 @@
         const listElement = document.querySelector('ul');
         const inputElement = document.querySelector('input');
 
-        function renderRepositories(repositories) {
+        function handleRepositories(repositories) {
             for (repo of repositories) {
                 const textElement = document.createTextNode(repo.name);
                 const liElement = document.createElement('li');
@@ -31,7 +31,7 @@
             if (!user) return;
             axios.get('https://api.github.com/users/' + user + '/repos')
                 .then(function (response) {
-                renderRepositories(response.data);       
+                handleRepositories(response.data);       
             });           
         }
     </script>
